@@ -76,6 +76,14 @@ body{
     padding: 10px;
     border-radius: 30px;
 }
+.cat p:hover{
+    background-color: transparent;
+    transition: 1s;
+    color:black;
+    cursor: pointer;
+    border: solid black 1px;
+
+}
 
 .salesimage img{
     width: 100%;
@@ -92,7 +100,24 @@ body{
     padding: 2%;
     top: 10%;
     left: 10%;
+    animation-name:zoom;
+    animation-duration: 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    border-radius:50px;
 
+}
+@keyframes zoom {
+
+    0%{
+        opacity: 0;
+        transform:scale(0);        
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        
+    }
 }
 
 .course-card{
