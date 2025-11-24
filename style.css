@@ -44,6 +44,9 @@ body{
     gap: 10px;
     align-items: center;
 }
+.navbar4{
+    display: none;
+}
 .mylearning{
     position: relative;
     cursor: pointer;
@@ -95,7 +98,6 @@ body{
     border: solid black 2px;
     position:absolute;
     width: 39%;
-    height: 17%;
     background-color: white;
     padding: 2%;
     top: 10%;
@@ -104,7 +106,7 @@ body{
     animation-duration: 3s;
     opacity: 0;
     animation-fill-mode: forwards;
-    border-radius:50px;
+    flex-wrap: wrap;
 
 }
 @keyframes zoom {
@@ -121,7 +123,9 @@ body{
 }
 
 .course-card{
-    width: 270px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     height: 50%;
@@ -177,5 +181,32 @@ body{
 }
 .footer1 p{
     margin: 20px;
+}
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+    
+}
+@media screen and (max-width:600px){
+    body{
+        font-size: 10px;
+      
+    }
+      .course-card{
+            flex-basis: 40%;
+        }
+        .cat{
+            display: none;
+        }
+        .navbar2,.navbar3{
+            display: none;
+
+        }
+        .navbar4{
+            display: inline;
+        }    
+    
+    
 }
 
